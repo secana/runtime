@@ -59,7 +59,7 @@ These instructions are written assuming the Ubuntu 16.04/18.04 LTS, since that's
 
 Minimum RAM required to build is 1GB. The build is known to fail on 512 MB VMs ([Issue 536](https://github.com/dotnet/coreclr/issues/536)).
 
-Toolchain Setup
+Ubuntu Toolchain Setup
 ---------------
 
 Building the repo requires CMake 3.14.2 or newer on Linux. Add Kitware's APT feed to your configuration for a newer version of CMake. See their instructions at <https://apt.kitware.com/>. Also, add LLVM/s APT feed to your configuration for a newer version of CMake. See their instructions as <http://apt.llvm.org/>.
@@ -92,3 +92,36 @@ A single line to install all packages above:
     ~$ sudo apt-get install cmake llvm-9 clang-9 autoconf automake libtool build-essential python curl git lldb-6.0 liblldb-6.0-dev libunwind8 libunwind8-dev gettext libicu-dev liblttng-ust-dev libssl-dev libnuma-dev libkrb5-dev
 
 You now have all the required components.
+
+
+Fedora Toolchain Setup
+---------------
+
+To build on Fedora 31, install the following packages.
+
+- cmake 
+- llvm 
+- clang 
+- autoconf 
+- automake 
+- libtool 
+- @development-tools 
+- python 
+- curl 
+- git 
+- lldb 
+- lldb-devel 
+- libunwind 
+- libunwind-devel 
+- gettext 
+- libicu-devel 
+- lttng-ust-devel 
+- openssl-devel 
+- numactl-devel 
+- krb5-libs 
+- krb5-devel 
+- zlib-devel
+
+A single line to install all packages above:
+
+    ~$ dnf install cmake llvm clang autoconf automake libtool @development-tools python curl git lldb lldb-devel libunwind libunwind-devel gettext libicu-devel lttng-ust-devel openssl-devel numactl-devel krb5-libs krb5-devel zlib-devel
